@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Plus+Jakarta+Sans:wght@500;800&family=Roboto:wght@300;400;700&display=swap");
+
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  width: 1440px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--Off-white);
+  padding: 10px 5px;
+}
+
+.navbar ul {
+  display: grid;
+  grid-template-columns: 0.13fr 0.1fr 0.13fr 0.15fr 0.1fr;
+  align-items: center;
+  justify-content: end;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--Very-dark-blue);
+}
+
+.navbar ul li a:hover {
+  color: var(--Soft-red);
+}
+
+.headline {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10px;
+  padding: 10px 5px;
+}
+
+.headline .img-desktop {
+  width: 100%;
+}
+
+.headline .img-mobile {
+  display: none;
+}
+
+.left .headline-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 72px;
+}
+
+.left .read-more {
+  width: 140px;
+  height: 40px;
+  border: none;
+  background-color: var(--Soft-red);
+  color: var(--Off-white);
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 375px;
+  }
+}
+
+/*
+
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+- Weights: 400, 700, 800
+
+*/
