@@ -27,6 +27,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
 }
 
 .navbar .menu-button,
@@ -201,7 +202,6 @@ body {
 @media only screen and (max-width: 600px) {
   body {
     width: 100%;
-    background-color: aquamarine;
   }
 
   main {
@@ -210,14 +210,60 @@ body {
 
   .navbar {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar .menu-button,
+  .navbar .close-button {
+    width: 40px;
+    height: 30px;
+  }
+
+  .navbar .menu-button,
+  .navbar .close-button:hover {
+    cursor: pointer;
   }
 
   .navbar ul {
+    background-color: var(--Off-white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    justify-content: left;
+    width: 70%;
+    height: 100vh;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
     display: none;
+  }
+
+  .navbar ul.active {
+    display: block;
+  }
+
+  .navbar ul .navlink {
+    margin: 20px 0;
+  }
+
+  .navbar ul .navlink:nth-child(1) {
+    margin-top: 100px;
   }
 
   .navbar .menu-button {
     display: block;
+  }
+
+  .navbar .close-button.active {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 1;
   }
 
   .headline {
@@ -238,8 +284,21 @@ body {
     flex-direction: column;
   }
 
+  .left-bottom,
+  .left-bottom-article {
+    gap: 20px;
+  }
+
+  .left-bottom-article {
+    margin-bottom: 40px;
+  }
+
   .article-card-container {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .article-card-container .article-card {
+    margin: 15px;
   }
 }
